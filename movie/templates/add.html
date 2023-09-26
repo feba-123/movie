@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>add film</h1>
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">name</label>-->
+<!--        <input type="text" class="form-control" name="n" placeholder="Enter name">-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">desc</label>-->
+<!--        <input type="text" class="form-control" name="d" placeholder="Enter details">-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">director</label>-->
+<!--        <input type="text" class="form-control" name="r" placeholder="Enter director name">-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">writer</label>-->
+<!--        <input type="text" class="form-control" name="t" placeholder="Enter writer name">-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">starring</label>-->
+<!--        <input type="text" class="form-control" name="s" placeholder="starring">-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">release year</label>-->
+<!--        <input type="number" class="form-control" name="a" placeholder="enter release year">-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">running time</label>-->
+<!--        <input type="text" class="form-control" name="m" placeholder="running time">-->
+<!--    </div>-->
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">Cover</label>-->
+<!--        <input type="file" class="form-control" name="c" placeholder="Enter Cover image ">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <input type="submit" class="btn btn-primary">-->
+<!--    </div>-->
+<!--</form>-->
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit">
+</form>
+{% endblock %}

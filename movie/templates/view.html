@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>movie</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>COVER</th>
+        <td><img src="{{b.cover.url}}" height="200px" width="300px"></td>
+        </tr>
+    <tr>
+        <th>name</th>
+        <td>{{b.name}}</td></tr>
+     <tr><th>released on</th>
+        <td>{{b.release_year}}</td></tr>
+     <tr><th>running time</th>
+        <td>{{b.running_time}}</td></tr>
+        <tr><th>directed by</th>
+        <td>{{b.director}}</td></tr>
+     <tr><th>written by</th>
+        <td>{{b.writer}}</td></tr>
+     <tr><th>starring</th>
+        <td>{{b.Starring}}</td></tr>
+       <tr> <th>plot</th>
+        <td>{{b.desc}}</td></tr>
+
+
+</table>
+<a href="{% url 'update' b.id %}" class="btn btn-warning">update</a>
+    <a href="{% url 'delete' b.id %}" class="btn btn-warning">delete</a>
+{% endblock %}

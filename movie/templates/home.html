@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container">
+<div class="row why_row">
+	{% for i in b %}
+    <div class="col-lg-3 why_col">
+					<div class="why_item">
+						<div class="why_image">
+							<img src="{{i.cover.url}}" style="height:300px;width:100%" alt="">
+						</div>
+						<div class="why_content ">
+							<div class="why_title" style="font-size:20px;font-weight:bold;">{{i.name}}</div>
+							 <a href="{% url 'view' i.id %}" class="btn btn-warning">View</a>
+
+						</div>
+					</div>
+				</div>
+	{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}
